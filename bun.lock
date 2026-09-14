@@ -20,6 +20,13 @@
         "typescript": "7.0.2",
       },
     },
+    "packages/pi-btw": {
+      "name": "@tifan/pi-btw",
+      "version": "0.1.0",
+      "peerDependencies": {
+        "@earendil-works/pi-coding-agent": ">=0.84.4",
+      },
+    },
     "packages/pi-copy-response": {
       "name": "@tifan/pi-copy-response",
       "version": "0.2.6",
@@ -41,9 +48,9 @@
     },
     "packages/pi-handoff": {
       "name": "@tifan/pi-handoff",
-      "version": "2.1.0",
+      "version": "2.2.1",
       "dependencies": {
-        "@tifan/pi-rename": "^0.4.2",
+        "@tifan/pi-rename": "^0.6.0",
       },
     },
     "packages/pi-inline-skills": {
@@ -96,7 +103,7 @@
     },
     "packages/pi-titlebar-spinner": {
       "name": "@tifan/pi-titlebar-spinner",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "peerDependencies": {
         "@earendil-works/pi-coding-agent": ">=0.84.4",
       },
@@ -358,6 +365,8 @@
     "@smithy/util-buffer-from": ["@smithy/util-buffer-from@2.2.0", "", { "dependencies": { "@smithy/is-array-buffer": "^2.2.0", "tslib": "^2.6.2" } }, "sha512-IJdWBbTcMQ6DA0gdNhh/BwrLkDR+ADW5Kr1aZmd4k3DIF6ezMV4R2NIAmT08wQJ3yUK82thHWmC/TnK/wpMMIA=="],
 
     "@smithy/util-utf8": ["@smithy/util-utf8@2.3.0", "", { "dependencies": { "@smithy/util-buffer-from": "^2.2.0", "tslib": "^2.6.2" } }, "sha512-R8Rdn8Hy72KKcebgLiv8jQcQkXoLMOGGv5uI1/k0l+snqkOzQ1R0ChUBCxWMlBsFMekWjq0wRudIweFs7sKT5A=="],
+
+    "@tifan/pi-btw": ["@tifan/pi-btw@workspace:packages/pi-btw"],
 
     "@tifan/pi-copy-response": ["@tifan/pi-copy-response@workspace:packages/pi-copy-response"],
 

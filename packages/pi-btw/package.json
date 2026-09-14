@@ -1,0 +1,41 @@
+{
+  "name": "@tifan/pi-btw",
+  "version": "0.1.0",
+  "description": "Ask private side questions about the current pi session.",
+  "keywords": [
+    "pi",
+    "pi-extension",
+    "pi-package",
+    "side-question"
+  ],
+  "homepage": "https://github.com/tifandotme/pi-extensions/tree/master/packages/pi-btw#readme",
+  "bugs": "https://github.com/tifandotme/pi-extensions/issues",
+  "license": "MIT",
+  "author": "Tifan Dwi Avianto <hi@tifan.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tifandotme/pi-extensions.git",
+    "directory": "packages/pi-btw"
+  },
+  "files": [
+    "src/**/*.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.84.4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}
