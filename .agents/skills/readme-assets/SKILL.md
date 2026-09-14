@@ -36,19 +36,25 @@ Pi.dev package gallery media:
 
 GitHub README video:
 
-```bash
-gh image check-token
-gh image --repo owner/repo packages/<package>/assets/DEMO.mp4
+Run these commands in Nushell:
+
+```nu
+with-env {GH_SESSION_TOKEN: (gh image extract-token)} {
+  gh image check-token
+}
+with-env {GH_SESSION_TOKEN: (gh image extract-token)} {
+  gh image --repo owner/repo packages/<package>/assets/DEMO.mp4
+}
 ```
 
-Paste the generated `https://github.com/user-attachments/assets/...` reference on its own line. GitHub embeds that reference as a video. Raw repository `<video>` HTML and MP4 image syntax do not render as GitHub README videos. If browser token lookup fails, keep the token in `GH_SESSION_TOKEN` and rerun the upload; do not put it in command arguments.
+Paste the generated `https://github.com/user-attachments/assets/...` reference on its own line. GitHub embeds that reference as a video. Raw repository `<video>` HTML and MP4 image syntax do not render as GitHub README videos. Keep the session token in `GH_SESSION_TOKEN`; do not put it in command arguments.
 
 ## Workflow
 
 1. Put source media in a temporary location and output media in the package `assets/` directory.
 2. Convert PNG/JPEG screenshots to `.webp` with `cwebp` when available.
 3. Convert short MOV/MP4 demos to animated `.webp` with `ffmpeg` and `img2webp`, or to H.264 `.mp4` when 30 fps and readable motion matter. Omit audio unless it is part of the demo.
-4. For GitHub video embeds, run `gh image --repo owner/repo packages/<package>/assets/DEMO.mp4` and paste its generated attachment reference into the README.
+4. In Nushell, run `with-env {GH_SESSION_TOKEN: (gh image extract-token)} { gh image --repo owner/repo packages/<package>/assets/DEMO.mp4 }` and paste its generated attachment reference into the README.
 5. For pi.dev gallery previews, add the matching `pi.image` or `pi.video` field with a public raw GitHub URL to the package manifest. Treat `pi.image` as required for every package with a README image.
 6. Update README image links to the raw GitHub URL format above.
 7. Remove temporary or superseded media files only when the README no longer references them.
