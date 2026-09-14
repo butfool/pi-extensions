@@ -15,6 +15,7 @@ pi-stash overrides Pi's built-in `Ctrl+S` shortcuts. Remap them in `$PI_CODING_A
 ```json
 {
   "app.models.save": ["ctrl+shift+s"],
+  "app.thinking.save": ["ctrl+shift+s"],
   "app.session.toggleSort": ["ctrl+shift+s"]
 }
 ```

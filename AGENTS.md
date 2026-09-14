@@ -1,6 +1,6 @@
 # pi-extensions
 
-At the start of each agent conversation in this repository, run `backlog instructions overview` once. Do not repeat it for follow-up turns. When recording or editing an ADR, use `domain-modelling`'s format, not Backlog.md.
+When recording or editing an ADR, use `domain-modelling`'s format.
 
 Monorepo of [pi-coding-agent](https://pi.dev) extensions. Each package in `packages/` is an independent pi extension published to npm under `@tifan/`.
 
