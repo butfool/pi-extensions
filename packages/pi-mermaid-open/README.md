@@ -2,6 +2,15 @@
 
 Find Mermaid diagrams that Pi left unrendered and show one in a terminal image viewer.
 
+<video controls muted loop playsinline width="960">
+  <source
+    src="https://raw.githubusercontent.com/tifandotme/pi-extensions/refs/heads/master/packages/pi-mermaid-open/assets/demo.mp4"
+    type="video/mp4"
+  />
+</video>
+
+[Open the demo video](https://raw.githubusercontent.com/tifandotme/pi-extensions/refs/heads/master/packages/pi-mermaid-open/assets/demo.mp4)
+
 ![Mermaid diagram viewer demo](https://raw.githubusercontent.com/tifandotme/pi-extensions/refs/heads/master/packages/pi-mermaid-open/assets/demo.webp)
 
 ## How it works
