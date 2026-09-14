@@ -9,8 +9,6 @@ Find Mermaid diagrams that Pi left unrendered and show one in a terminal image v
   />
 </video>
 
-[Open the demo video](https://raw.githubusercontent.com/tifandotme/pi-extensions/refs/heads/master/packages/pi-mermaid-open/assets/demo.mp4)
-
 ![Mermaid diagram viewer demo](https://raw.githubusercontent.com/tifandotme/pi-extensions/refs/heads/master/packages/pi-mermaid-open/assets/demo.webp)
 
 ## How it works
