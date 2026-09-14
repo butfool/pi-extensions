@@ -10,6 +10,7 @@ description: Standardizes README media assets for packages that must render on G
 - Use WebP for screenshots and static README images.
 - Use animated WebP for short, silent demos when broad inline-image support matters. Use H.264 MP4 when motion and text readability matter.
 - Store package media under `packages/<package>/assets/`.
+- Every package README image requires a matching `pi.image` field in `package.json`; every video requires `pi.video`.
 - Use raw GitHub URLs for README images and the `pi.image`/`pi.video` package manifest fields.
 - Use `gh image` to create GitHub attachment references for README video embeds.
 - Use descriptive alt text.
@@ -48,7 +49,7 @@ Paste the generated `https://github.com/user-attachments/assets/...` reference o
 2. Convert PNG/JPEG screenshots to `.webp` with `cwebp` when available.
 3. Convert short MOV/MP4 demos to animated `.webp` with `ffmpeg` and `img2webp`, or to H.264 `.mp4` when 30 fps and readable motion matter. Omit audio unless it is part of the demo.
 4. For GitHub video embeds, run `gh image --repo owner/repo packages/<package>/assets/DEMO.mp4` and paste its generated attachment reference into the README.
-5. For pi.dev gallery previews, add `pi.image` or `pi.video` with a public raw GitHub URL to the package manifest.
+5. For pi.dev gallery previews, add the matching `pi.image` or `pi.video` field with a public raw GitHub URL to the package manifest. Treat `pi.image` as required for every package with a README image.
 6. Update README image links to the raw GitHub URL format above.
 7. Remove temporary or superseded media files only when the README no longer references them.
 8. Verify no stale media references remain:
